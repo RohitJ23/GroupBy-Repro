@@ -27,7 +27,7 @@ public class GroupByBugTest {
         }
 
         Page<Object[]> result = demoRepository.testGroupByQuery(PageRequest.of(0, 1));
-        assertEquals(result.getTotalElements(), 1);
-        assertEquals(result.getTotalPages(), 1);
+        assertEquals(1, result.getTotalElements());
+        assertEquals(1, result.getTotalPages());
     }
 }
