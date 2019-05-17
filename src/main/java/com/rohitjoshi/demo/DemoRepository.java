@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DemoRepository extends PagingAndSortingRepository<DemoEntity, String> {
 
-    @Query("SELECT d.testColumn, COUNT(d.testColumn) FROM demoEntity d GROUP BY testColumn")
+    @Query("SELECT d.testColumn, COUNT(d.testColumn) FROM demoEntity d GROUP BY d.testColumn")
     Page<Object[]> testGroupByQuery(Pageable pageable);
 }
